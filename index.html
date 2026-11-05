@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="DC-SQEM extracts feature-preserving medial meshes directly from oriented point clouds with dual contouring and the Spherical Quadric Error Metric.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DC-SQEM: Medial Mesh Extraction by Dual Contouring with Spherical Quadric Error Metric">
+  <meta property="og:description" content="Project page for DC-SQEM, accepted for publication in ACM Transactions on Graphics.">
+  <meta property="og:image" content="assets/gallery.jpg">
+  <title>DC-SQEM: Medial Mesh Extraction by Dual Contouring with Spherical Quadric Error Metric</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <main id="main">
+    <header class="paper-header container">
+      <h1>DC-SQEM: Medial Mesh Extraction by Dual Contouring with Spherical Quadric Error Metric</h1>
+      <p class="venue">ACM Transactions on Graphics</p>
+      <p class="authors">
+        <span>Bingchuan Li<sup>1</sup>,</span>
+        <span>Ruilong Liu<sup>2</sup>,</span>
+        <span>Tianhao Hu<sup>2</sup>,</span>
+        <span>Congyi Zhang<sup>3</sup>,</span>
+        <span>Ningna Wang<sup>3</sup>,</span>
+        <span>Junfeng Yao<sup>2,*</sup>,</span>
+        <span>Xiaohu Guo<sup>3</sup></span>
+      </p>
+      <p class="affiliations">
+        <span><sup>1</sup>School of Informatics, Xiamen University</span>
+        <span><sup>2</sup>School of Film, Xiamen University</span>
+        <span><sup>3</sup>Department of Computer Science, The University of Texas at Dallas</span>
+      </p>
+      <div class="resource-links" aria-label="Project resources">
+        <a href="assets/DC_SQEM_final.pdf" target="_blank" rel="noopener"><span aria-hidden="true">▤</span> Paper</a>
+        <a href="assets/DC_SQEM_sup.pdf" target="_blank" rel="noopener"><span aria-hidden="true">▧</span> Supplement</a>
+        <a href="https://github.com/Jiafeimaochuanqi/dc_sqem" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">&lt;/&gt;</span> Code</a>
+      </div>
+    </header>
+
+    <section class="teaser container" aria-label="Method overview">
+      <figure>
+        <a class="figure-link" href="assets/pipeline.jpg" target="_blank" rel="noopener" aria-label="Open the full-size DC-SQEM pipeline figure"><img src="assets/pipeline.jpg" alt="The five stages of DC-SQEM: oriented point cloud, voxelization, SQEM fitting, initial medial mesh, and final medial mesh." width="2000" height="441" fetchpriority="high"></a>
+        <figcaption>Overview of the DC-SQEM pipeline.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section abstract-section container" id="abstract">
+      <h2>Abstract</h2>
+      <div class="abstract-copy">
+        <p>The medial axis, as a compact representation, describes not only the boundary but also the interior of the shape, and has been widely used in analyzing and simplifying shapes. However, approximating feature-preserving medial axis from unstructured data, such as oriented point clouds, remains challenging due to the lack of explicit connectivity and the presence of noise in the source. We propose DC-SQEM, a dual-contouring-based framework that computes medial meshes (an explicit representation of the medial axis) directly from oriented point clouds without relying on watertight manifold surfaces or volumetric structures. With the help of an adaptive octree, our method fits local medial spheres for each cell based on the Spherical Quadric Error Metric (SQEM). We address several long-standing robustness issues in dual-contouring and mesh extraction, including out-of-cell solutions, unstable feature classification, and redundant topological connections. To this end, we introduce virtual nodes, a feature-downgrading strategy, and a geometry-driven topology-aware cleanup procedure, enabling robust SQEM-based medial dual contouring with clean mesh outputs. Unlike prior point-cloud-based methods that produce either only 1D skeletal structures or incomplete medial features, our method preserves sharp geometric features from the input and reconstructs a complete medial structure, including sheets, curves, seams, and junctions. Compared to restricted-power-diagram-based approaches, our algorithm can handle point clouds as input, without having a strong requirement on water-tightness or manifoldness.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="results">
+      <h2>Results</h2>
+      <figure class="wide-figure">
+        <a class="figure-link" href="assets/gallery.jpg" target="_blank" rel="noopener" aria-label="Open the full-size result gallery"><img src="assets/gallery.jpg" alt="DC-SQEM medial meshes on mechanical CAD and organic shapes." width="2000" height="715" loading="lazy"></a>
+        <figcaption>Feature-preserving medial meshes on CAD and non-CAD shapes.</figcaption>
+      </figure>
+      <p class="result-summary">On the 93-model CAD benchmark, DC-SQEM generates a medial mesh for all 93 inputs, with an average topology error rate of 2.1505% and an average Hausdorff distance of 0.4203%. These results concern the clean, sufficiently dense point clouds evaluated in the paper.</p>
+    </section>
+
+    <section class="section container bib-section" id="citation">
+      <h2>BibTeX</h2>
+      <p>If you find this work useful, please cite our paper. The entry will be updated when the final journal record is available.</p>
+      <div class="bib-toolbar"><button type="button" id="copy-bib">Copy BibTeX</button></div>
+      <pre id="bibtex">@article{li2026dcsqem,
+  title   = {DC-SQEM: Medial Mesh Extraction by Dual Contouring
+             with Spherical Quadric Error Metric},
+  author  = {Bingchuan Li and Ruilong Liu and Tianhao Hu and
+             Congyi Zhang and Ningna Wang and Junfeng Yao and
+             Xiaohu Guo},
+  journal = {ACM Transactions on Graphics},
+  year    = {2026},
+  note    = {Accepted for publication}
+}</pre>
+    </section>
+
+    <footer class="footer container">
+      <hr>
+      <p>For questions or feedback, please contact <a href="mailto:libingchuan@stu.xmu.edu.cn">Bingchuan Li</a>.</p>
+    </footer>
+  </main>
+</body>
+</html>
