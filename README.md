@@ -17,6 +17,6 @@ The paper PDF is about 40 MiB. GitHub's browser upload is limited to 25 MiB per 
 - `assets/*.jpg`: website renditions of figures from the manuscript project; use the source PDFs in the manuscript project for print-quality figures.
 - Code links to <https://github.com/Jiafeimaochuanqi/dc_sqem>.
 
-The data package is not mirrored on this site. Add its public download link if it is later hosted online. Likewise, the page intentionally has no arXiv or journal DOI link until those URLs are confirmed. The provisional BibTeX entry should be updated after the journal record is published.
+The data package is not mirrored on this site. Add its public download link if it is later hosted online. The Paper button links to the public arXiv record. The provisional BibTeX entry should be updated after the journal record is published.
 
 The page loads web fonts from Google Fonts when online and falls back to local sans-serif fonts offline. All other page assets are local.
